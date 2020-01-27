@@ -14,7 +14,8 @@
     "README.md",
     "StyledFirebaseAuth.d.ts",
     "StyledFirebaseAuth.js",
-    "StyledFirebaseAuth.js.map"
+    "StyledFirebaseAuth.js.map",
+    "dist"
   ],
   "main": "index.js",
   "scripts": {

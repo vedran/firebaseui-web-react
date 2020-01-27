@@ -52,7 +52,7 @@ export default class FirebaseAuth extends React.Component {
 
     // Firebase UI only works on the Client. So we're loading the package in `componentDidMount`
     // So that this works when doing server-side rendering.
-    const firebaseui = require('firebaseui');
+    const firebaseui = this.props.customFirebaseUIModule || require('firebaseui');
 
     // Wait in case the firebase UI instance is being deleted.
     // This can happen if you unmount/remount the element quickly.
@@ -108,6 +108,8 @@ export default class FirebaseAuth extends React.Component {
     // disableAutoSignIn().
     uiCallback?: Function,
     className?: String,
+
+    customFirebaseUIModule?: Any,
   };
 
   /**
